@@ -1,0 +1,19 @@
+{
+  "name": "hw03",
+  "version": "1.0.0",
+  "description": "Tài liệu này chứa thông tin tổng hợp và bảng tự đánh giá điểm số (Self-Assessment Table) cho bài tập lớn HW03 - Kiểm thử GUI & Usability trên hệ thống EMS.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}
