@@ -56,8 +56,9 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
 
     // 5. Chọn Loại yêu cầu (Request Type Dropdown)
     await categoryButton.first().click();
-    // Đợi danh sách option hiển thị và chọn SUPPORT
-    const supportOption = page.locator('li[role="option"]').filter({ hasText: 'SUPPORT' });
+    // Đợi và chọn option "Hỗ trợ"
+    const supportOption = page.locator('li[role="option"]:has-text("Hỗ trợ")');
+    await supportOption.waitFor({ state: 'visible', timeout: 5000 });
     await supportOption.first().click();
 
     // 6. Điền tiêu đề và mô tả sự cố
