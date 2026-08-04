@@ -28,7 +28,7 @@ Chúng tôi lựa chọn **Playwright (Node.js)** làm công cụ kiểm thử t
    ```
 3. **Cài đặt thư mục test:** Tạo thư mục `tests` và đặt file kịch bản `ems_support_gui.spec.js` vào trong đó.
 4. **Cấu hình SUT (System Under Test):** Kịch bản kiểm thử hướng tới URL trực tiếp của EMS:
-   `https://promoter-starboard-prude.ngrok-free.dev/`
+   `https://prod-dev.ems-fitus.cloud/`
 
 ---
 

@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 // Cấu hình URL hệ thống cần test (SUT)
-const BASE_URL = 'https://promoter-starboard-prude.ngrok-free.dev';
+const BASE_URL = 'https://prod-dev.ems-fitus.cloud';
 
 test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
 
