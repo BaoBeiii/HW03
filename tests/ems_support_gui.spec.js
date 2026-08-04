@@ -48,18 +48,18 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
     // 4. Kiểm tra sự hiện diện của các nhãn và nút bấm biểu mẫu (IA-02)
     const titleInput = page.locator('input[placeholder*="Unable to register"], input[name="title"]');
     const descriptionTextarea = page.locator('textarea[placeholder*="I tried to register"], textarea[name="description"]');
-    const categoryButton = page.locator('button:has-text("Request type"), button[id^="react-aria"]');
+    const categoryButton = page.locator('button:has-text("Request type")');
     
     await expect(titleInput).toBeVisible();
     await expect(descriptionTextarea).toBeVisible();
-    await expect(categoryButton.first()).toBeVisible();
+    await expect(categoryButton).toBeVisible();
 
     // 5. Chọn Loại yêu cầu (Request Type Dropdown)
-    await categoryButton.first().click();
-    // Đợi và chọn option "Hỗ trợ"
-    const supportOption = page.locator('li[role="option"]:has-text("Hỗ trợ")');
+    await categoryButton.click();
+    // Đợi và chọn option "Support"
+    const supportOption = page.locator('li[role="option"][data-key="SUPPORT"]');
     await supportOption.waitFor({ state: 'visible', timeout: 5000 });
-    await supportOption.first().click();
+    await supportOption.click();
 
     // 6. Điền tiêu đề và mô tả sự cố
     const testTitle = `Lỗi font chữ vé QR - Test Auto ${Date.now()}`;
