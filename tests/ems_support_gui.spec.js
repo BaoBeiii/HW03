@@ -52,7 +52,7 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
     
     await expect(titleInput).toBeVisible();
     await expect(descriptionTextarea).toBeVisible();
-    await expect(categoryButton).first().toBeVisible();
+    await expect(categoryButton.first()).toBeVisible();
 
     // 5. Chọn Loại yêu cầu (Request Type Dropdown)
     await categoryButton.first().click();
@@ -99,7 +99,7 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
     await expect(tableHeader.first()).toBeVisible();
 
     // 4. Tìm kiếm từ khóa mẫu
-    const searchInput = page.locator('input[placeholder*="Search complaints"], input[placeholder*="Tìm kiếm"], input[type="text"]');
+    const searchInput = page.locator('input[aria-label="Search name, email or title"]');
     if (await searchInput.isVisible()) {
       await searchInput.fill('Lỗi font chữ');
       await page.waitForTimeout(1000); // Đợi danh sách lọc kết quả
