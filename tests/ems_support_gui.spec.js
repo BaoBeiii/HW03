@@ -57,7 +57,7 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
     // 5. Chọn Loại yêu cầu (Request Type Dropdown)
     await categoryButton.first().click();
     // Chọn option SUPPORT (Hỗ trợ) hoặc COMPLAINT (Khiếu nại)
-    const supportOption = page.locator('li[role="option"][id$="-option-SUPPORT"], li[role="option"]');
+    const supportOption = page.locator('[role="option"]');
     await supportOption.first().click();
 
     // 6. Điền tiêu đề và mô tả sự cố
