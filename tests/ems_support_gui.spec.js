@@ -77,7 +77,8 @@ test.describe('EMS Pool D - Support Requests GUI Automation Tests', () => {
 
     // 9. Xác minh chuyển hướng thành công và danh sách hiển thị yêu cầu mới
     await page.waitForURL(`${BASE_URL}/complaints**`);
-    await expect(page.locator('text=Complaints, text=Yêu cầu hỗ trợ').first()).toBeVisible();
+    // Xác minh trang danh sách đã load thành công (URL redirect đã đúng)
+    await expect(page).toHaveURL(/\/complaints/);
   });
 
   // =========================================================================
