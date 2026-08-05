@@ -68,3 +68,21 @@ Tài liệu này ghi nhận chi tiết nhật ký tương tác từng bước gi
   AI đã đề xuất thiết kế lại luồng chạy thông qua 2 kỹ thuật nâng cao:
   1. **Tách luồng Đăng nhập (Storage State)**: Đăng nhập duy nhất một lần trên trình duyệt Chromium ở đầu file kiểm thử. Lưu trạng thái phiên làm việc (cookies và localStorage) vào file tạm `state.json` thông qua `context.storageState()`. Khi khởi tạo các trình duyệt sau (WebKit, Firefox), nạp trực tiếp file `state.json` vào cấu hình ngữ cảnh (`browser.newContext({ storageState })`). Việc này giúp tất cả các trình duyệt và thiết bị giả lập bỏ qua hẳn trang login, loại bỏ 100% lỗi timeout chuyển hướng.
   2. **Giải quyết Responsive Mobile cho trang Chi tiết (D4)**: Thay vì cố gắng tìm kiếm dòng `tr` trong bảng danh sách (vốn bị ẩn hoặc đổi cấu trúc trên mobile), hãy viết một hàm phụ `fetchD4DetailUrl` chạy trước trên Chrome Desktop để bấm vào dòng đầu tiên và lấy URL trang chi tiết thực tế (ví dụ: `/dashboard/admin/complaints/63`). Sau đó, ở các ca kiểm thử tương thích thiết bị di động, Playwright chỉ cần điều hướng trực tiếp (`page.goto(resolvedD4Url)`) để chụp ảnh màn hình chi tiết D4 mà không sợ bị vỡ luồng do thay đổi layout danh sách.
+
+---
+
+## PHIÊN LÀM VIỆC 3: Dọn dẹp và Đồng bộ hóa Kho lưu trữ Git (Git Repository Cleanup)
+* **Công cụ AI sử dụng:** Gemini 3.5 Flash (High-performance model)
+* **Thời gian thực hiện:** Ngày 05/08/2026
+* **Mục tiêu:** Loại bỏ các tệp tin cấu hình và thư mục kiểm thử khỏi hệ thống kiểm soát phiên bản Git (nhưng giữ lại ở máy cục bộ).
+
+### Lượt tương tác 1:
+* **Prompt của tôi:**
+  > "Tôi đã thêm `tests/`, `package.json`, và `package-lock.json` vào `.gitignore` để tránh đẩy chúng lên GitHub. Tuy nhiên, các tệp này đã được commit từ trước nên Git vẫn tiếp tục theo dõi chúng. Hãy hướng dẫn tôi cách xóa chúng khỏi Git index để khi push lên GitHub chúng sẽ biến mất, nhưng vẫn giữ nguyên vẹn các tệp này ở máy local."
+* **Tóm tắt câu trả lời của AI:**
+  AI đã hướng dẫn sử dụng lệnh `git rm --cached` kết hợp với tham số `-r` cho thư mục. Cụ thể là chạy các lệnh:
+  1. `git rm -r --cached tests`
+  2. `git rm --cached package-lock.json`
+  3. `git rm --cached package.json`
+  Lệnh này sẽ xóa các tệp khỏi index của Git (staging area) để đánh dấu xóa trên kho lưu trữ từ xa, nhưng hoàn toàn giữ nguyên dữ liệu vật lý ở máy local.
+
