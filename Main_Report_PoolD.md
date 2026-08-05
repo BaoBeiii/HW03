@@ -1,6 +1,7 @@
 # BÁO CÁO CÁ NHÂN - KIỂM THỬ GUI & USABILITY TESTING
 **Phân hệ:** Pool D - Yêu cầu Hỗ trợ (Support Requests)  
 **Học phần:** CS423 · CSC15003 — Kiểm thử phần mềm (AI-First)  
+**GitHub Repository:** [BaoBeiii/HW03](https://github.com/BaoBeiii/HW03)  
 
 ---
 

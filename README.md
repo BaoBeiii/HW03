@@ -2,6 +2,8 @@
 
 Tài liệu này chứa thông tin tổng hợp và bảng tự đánh giá điểm số (Self-Assessment Table) cho bài tập lớn HW03 - Kiểm thử GUI & Usability trên hệ thống EMS.
 
+* **GitHub Repository:** [BaoBeiii/HW03](https://github.com/BaoBeiii/HW03)
+
 ---
 
 ## 1. Tóm tắt Kiểm thử (Test Summary)
