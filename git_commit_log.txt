@@ -1,4 +1,10 @@
-﻿commit 4060a0ab5c5552bef42e289e0d4afb794324ae88
+﻿commit de645b5d339835d1e3fd1b9d636456e451d11e4c
+Author: Student <student@student.hcmus.edu.vn>
+Date:   Wed Aug 5 07:59:16 2026 +0700
+
+    docs: separate AI audit & critique, remove appendices from report, and add screenshots
+
+commit 4060a0ab5c5552bef42e289e0d4afb794324ae88
 Author: Student <student@student.hcmus.edu.vn>
 Date:   Wed Aug 5 00:28:43 2026 +0700
 
