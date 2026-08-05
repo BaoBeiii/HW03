@@ -46,4 +46,4 @@ Tài liệu này chứa thông tin tổng hợp và bảng tự đánh giá đi�
 | **Task 3: Cross-Browser/Platform** | 25 | **25** | Đã hoàn thành bảng ma trận phủ đủ 3 OS, 5 trình duyệt, 3 thiết bị trên cả 3 màn hình và chỉ ra lỗi hiển thị cụ thể trên môi trường iOS Safari. |
 | **Task 4: Bug & Findings Log** | 10 | **10** | Đã tổng hợp toàn bộ lỗi chức năng và lỗi hiển thị vào bảng Findings Log tập trung ở Mục 5 của `Main_Report_PoolD.md` khớp chuẩn xác với các tiêu chí trong Google Form. |
 | **Task 5: Agent Skills & Automation** | 10 | **10** | Đã viết và **chạy thành công** script kiểm thử tự động Playwright (`tests/ems_support_gui.spec.js`) trên môi trường thật `prod-dev.ems-fitus.cloud` — **3/3 ca kiểm thử PASS** (TC_GUI_01: gửi yêu cầu hỗ trợ 8.6s, TC_GUI_02: tìm kiếm/lọc 4.4s, TC_GUI_03: duyệt chi tiết & phản hồi 5.8s). Kế hoạch chi tiết tại `Automated_GUI_Test_Plan.md`. |
-| **TỔNG CỘNG** | **100** | **90** | **Hoàn thành đầy đủ các tài liệu kiểm thử bằng Tiếng Việt. Kiểm thử tự động đã chạy thành công 3/3 PASS. Usability testing đã lập kế hoạch, chờ thực hiện thực tế.** |
+| **TỔNG CỘNG** | **100** | **90** | |

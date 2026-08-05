@@ -1,0 +1,6 @@
+# Phân tích Phản biện AI (AI Critique)
+
+Khi sử dụng AI làm trợ lý kiểm thử, tôi nhận thấy một số hạn chế rõ ràng:
+1. **Thiếu tính nhạy bén với thực tế cục bộ:** AI thiết kế các kịch bản kiểm thử rất chuẩn lý thuyết, nhưng nó hoàn toàn bỏ qua các yếu tố đặc thù của tiếng Việt (độ dài chữ, font unicode lỗi trên file QR). AI mặc định rằng việc dịch thuật sẽ khớp hoàn toàn vào kích thước nút bấm được thiết kế ban đầu bằng tiếng Anh, dẫn tới việc bỏ sót lỗi tràn văn bản (Text Overflow) cực kỳ phổ biến trên EMS.
+2. **Kịch bản kiểm thử tự động quá lý tưởng:** Đoạn script Playwright do AI đề xuất ban đầu giả định hệ thống hoạt động mượt mà không có độ trễ mạng hoặc các pop-up chặn đường (như cảnh báo bảo mật của ngrok tunnel). Nếu bê nguyên code của AI chạy, test suite sẽ bị lỗi ngay lập tức. Con người phải can thiệp để viết thêm mã bỏ qua cảnh báo ngrok và thêm cơ chế xử lý lỗi click đúp.
+3. **Bài học kinh nghiệm:** AI là một công cụ hỗ trợ tuyệt vời để xây dựng khung sườn và định dạng tài liệu, giúp tiết kiệm 70% thời gian gõ văn bản thô. Tuy nhiên, con người bắt buộc phải trực tiếp kiểm tra ứng dụng thực tế để phát hiện những lỗi tinh vi về mặt thẩm mỹ, trải nghiệm người dùng và tính tương thích trên thiết bị di động thực tế.
