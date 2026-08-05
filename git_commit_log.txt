@@ -1,4 +1,16 @@
-﻿commit 7bb1da1bd0839c5a9acab7ab74e698ffc337bf23
+﻿commit bb6b60d03ff998f417f5ce4050d1b8d73bb6029d
+Author: Student <student@student.hcmus.edu.vn>
+Date:   Wed Aug 5 08:17:40 2026 +0700
+
+    docs: add GitHub repository link to README and main report
+
+commit 2b2af2bac7d97a213b24aea9b57592b7b847c614
+Author: Student <student@student.hcmus.edu.vn>
+Date:   Wed Aug 5 08:16:42 2026 +0700
+
+    docs: update git commit log file after self-assessment update
+
+commit 7bb1da1bd0839c5a9acab7ab74e698ffc337bf23
 Author: Student <student@student.hcmus.edu.vn>
 Date:   Wed Aug 5 08:15:47 2026 +0700
 
